@@ -1,0 +1,93 @@
+<html>
+<head>
+	<link rel="stylesheet"  type="text/css" href="loginstyle.css?version=51">
+	<style type="text/css">
+		body{
+	background:url('https://image.freepik.com/free-vector/abstract-background-with-a-watercolor-texture_1048-2144.jpg'); 
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+form{
+	background:{{ url_for('static', filename='images/one.png') }}
+	//background-repeat: no-repeat;
+	//background-size: cover;
+	position: absolute;
+	width:500px;
+	height:1600px;
+	left:500px;
+	top:150px;
+	border:1px solid silver;
+	border-radius:10px;
+	background: blue;
+}
+h1{
+	//margin: 20px;
+	color: white;
+	border-bottom:1px solid silver;
+	text-align:center;
+}
+.headers{
+	//margin: 20px;
+	color: blue;
+	//background: red;
+	border-bottom:1px solid silver;
+	text-align:center;
+	font-size: 35px;
+}
+p{
+	font-size: 25px;
+	color:white;
+}
+div{
+	font-size: 25px;
+	margin: 20px;
+}
+option{
+
+}
+.one{
+	font-size: 25px;
+	width:450px;
+	border-radius: 10px;
+	background: lightblue;
+}
+.btn{
+	text-align:center;
+	width:200px;
+	margin-left: 150px;
+	font-size: 25px;
+	border-radius: 20px;
+	background: lightblue;
+}
+a{
+	color:black;
+}
+	</style>
+</head>
+<body>
+	<h1 class="headers">HEART DISEASE PREDICTOR</h1>
+<form action="/sub" method="POST">
+	<h1>LOGIN</h1>
+	<div><p>Age:</p><input class="one" type="text" name="age" required></div>
+	<div><p>Sex:</p>
+		<select id="cars" class="one" name="sex">
+  			<option value="Male">Male</option>
+  			<option value="Female">Female</option>
+  			<option value="Others">Others</option>
+		</select>
+	</div>
+	<div><p>Chest Pain:</p><input class="one" type="text" name="cp" required></div>
+	<div><p>Rest Blood Pressue:</p><input class="one" type="text" name="rest Bp" required></div>
+	<div><p>Cholestrol(0-3):</p><input class="one" type="text" name="chol" required></div>
+	<div><p>Fasting Blood Sugar:</p><input class="one" type="text" name="fbs" required></div>
+	<div><p>Resting ECG:</p><input class="one" type="text" name="restecg" required></div>
+	<div><p>Heartbeat:</p><input class="one" type="text" name="hb" required></div>
+	<div><p>Exang:</p><input class="one" type="text" name="exang" required></div>
+	<div><p>Old Peak:</p><input class="one" type="text" name="op" required></div>
+	<div><p>Slope:</p><input class="one" type="text" name="slope" required></div>
+	<div><p>CA(Flouroscopy Result):</p><input class="one" type="text" name="ca" required></div>
+	<div><p>Thal(Based on Thalium Test):</p><input class="one" type="text" name="thal" required></div>
+	<input class="btn" type="submit" value="PREDICT">
+</form>
+</body>
+</html>
